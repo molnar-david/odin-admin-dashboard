@@ -22,6 +22,7 @@
 
 html {
     font-family: Roboto, sans-serif;
+    font-weight: bold;
 }
 
 #site-container {
@@ -37,7 +38,6 @@ html {
     background-color: #1992d4;
     gap: 30px;
     color: white;
-    font-weight: bold;
     font-size: 1.3rem;
 }
 
@@ -75,7 +75,7 @@ html {
     align-items: center;
     padding: 10px 60px 20px 40px;
     box-shadow: 0 5px 5px lightgrey;
-    font-weight: bold;
+    z-index: 0;
     gap: 30px;
     font-size: 1.2rem;
 }
@@ -148,6 +148,17 @@ html {
 #main-content {
     display: grid;
     grid-template: 1fr 1fr / 1fr 200px;
+    background-color: #e2e8f0;
+    padding: 40px 20px;
+}
+
+#main-content > div {
+    display: grid;
+    gap: 12px;
+}
+
+.content-title {
+    font-size: 1.2rem;
 }
 
 #projects {
@@ -156,14 +167,39 @@ html {
 
 #card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    padding-right: 20px;
+}
+
+.card {
+    display: grid;
+    grid-auto-rows: auto auto 1fr;
+    border-left: 8px solid #ffbb00;
+    border-radius: 8px;
+    background-color: white;
+    padding: 40px 20px;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-content {
+    width: 80%;
+    font-size: 1rem;
+    color: #5e5d5d;
+    font-weight: normal;
 }
 
 .card ul {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
+    align-self: end;
     justify-content: end;
+    gap: 24px;
 }
 
 .grid-left {
